@@ -1,0 +1,45 @@
+*{
+    box-sizing: initial;
+}
+.login-header{
+    background: var(--background-login);
+
+}
+.login-header{
+    position: relative;
+    background: var(--background-login);
+    border-radius: 0em;
+}
+
+
+.logo-img{
+    display: block;
+    width: 15rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30%;
+}
+
+
+.login-form{
+    max-width: 65%;
+    margin: auto;
+}
+
+.login-form ion-label,
+.login-form .count_caracter{
+    color: var(--ion-color-medium-tint);
+    
+}
+
+.login-form .count_caracter{
+    font-size: 12px;
+    float: right;
+}
+
+.login-form ion-button{
+    padding-top: 30px;
+    width:100%;
+    height: 56px;
+    margin: auto;
+}
