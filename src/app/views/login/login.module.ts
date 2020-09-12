@@ -8,12 +8,20 @@ import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
 
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
+
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
+ 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule
+    LoginPageRoutingModule,
+    NgxMaskModule.forRoot(maskConfig)
   ],
   declarations: [LoginPage]
 })

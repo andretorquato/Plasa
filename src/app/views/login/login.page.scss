@@ -43,3 +43,100 @@
     height: 56px;
     margin: auto;
 }
+
+
+/* form starting stylings ------------------------------- */
+.group{ 
+    position:relative; 
+    margin-bottom:45px; 
+    
+
+}
+.group input{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid var(--ion-color-medium-tint);
+}
+.group input:focus{ outline:none; }
+  
+  /* LABEL ======================================= */
+ .group label{
+    color:var(--ion-color-medium-tint); 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+  
+  /* active state */
+  .group input:focus ~ label, .group input:valid ~ label{
+    top:-20px;
+    font-size:14px;
+    color:var(--ion-color-medium-tint);
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar{ position:relative; display:block; width:105%; }
+  .bar:before, .bar:after     {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background: var(--ion-color-primary); 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:110%; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:var(--ion-color-primary);; }
+    to    { width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:var(--ion-color-primary);; }
+    to    { width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:var(--ion-color-primary);; }
+    to    { width:0; background:transparent; }
+  }
+  

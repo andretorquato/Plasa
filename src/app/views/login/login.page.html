@@ -8,20 +8,23 @@
   </div>
 
   <div class="login-form">
-    
-    <ion-item>
-      <ion-label class="login-input" position="floating">CPF</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <span class="count_caracter"><span (count_character) = "count()">0</span>/11</span>
-
-    <ion-item>
-      <ion-label class="login-input" position="floating">Data</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <span class="count_caracter"><span class="count_"(count_character) = "count()">0</span>/10</span>
-    
-    <ion-button color="warning">ENTRAR</ion-button>
-
+    <form>
+    <div class="group">      
+      <input type="text" mask="000.000.000-00"required #count_1 (keyup)="0">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>CPF</label>
+      <span class="count_caracter"><span>{{count_1.value?.length-3}}</span>/11</span>
+    </div>
+      
+    <div class="group">      
+      <input type="text"  matInput mask="00/00/0000" required required #count_2 (keyup)="0">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Data</label>
+      <span class="count_caracter"><span >{{count_2.value?.length}}</span>/10</span>
+    </div>
+    <ion-button [routerLink]="['/folder/Inbox']" routerLinkActive="router-link-active"   color="warning">ENTRAR</ion-button>
+  </form>
   </div>
 </ion-content>
