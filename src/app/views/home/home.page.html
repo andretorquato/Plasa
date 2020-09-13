@@ -3,19 +3,36 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <img class="menu-logo" src="{{ logo }}" alt="logo">
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
+  <ion-header>
+    
+    <ion-slides pager="false">
+      <ion-slide *ngFor="let slide of slides">
+        <img src="{{slide.img}}" alt="{{slide.id}}">
+      </ion-slide>
+    </ion-slides>
+
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  
+    <div class="tools-menu">
+
+      <ion-tab-bar *ngFor="let p of appPages; let i = index" slot="{{p.icon}}">
+        <ion-tab-button 
+        (click)="selectedIndex = i" 
+        routerDirection="root" 
+        [routerLink]="[p.url]"
+        [class.selected]="selectedIndex == i">
+        <ion-icon name="{{p.icon}}"></ion-icon>
+        <ion-label>{{ p.title }}</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+
+    </div>
   </div>
 </ion-content>

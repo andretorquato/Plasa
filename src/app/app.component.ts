@@ -10,17 +10,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
+  
+  public user = {
+    name:'André Torquato',
+    photo: 'https://avatars2.githubusercontent.com/u/44441254?s=460&u=9b9fad4dfdf539853131f359812f98f65be72205&v=4'
+  }
   public selectedIndex = 0;
   public appPages = [
     {
       title: 'Início',
-      url: '/home/index',
+      url: '/home/dashboard',
       icon: 'home'
     },
     {
       title: 'Identidade',
       url: '/home/profile',
-      icon: 'contact'
+      icon: 'person'
     },
     {
       title: 'Dependentes',
@@ -45,7 +50,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Reportar Problema',
       url: '/home/feedback',
-      icon: 'alert'
+      icon: 'bug'
     },
     {
       title: 'Sair',
@@ -53,7 +58,8 @@ export class AppComponent implements OnInit {
       icon: 'power'
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  
+  
 
   constructor(
     private platform: Platform,
