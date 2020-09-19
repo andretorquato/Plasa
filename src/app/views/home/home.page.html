@@ -1,30 +1,3 @@
-<app-menu></app-menu>
-<ion-content [fullscreen]="true">
-  <ion-header>
-    
-    <ion-slides pager="false">
-      <ion-slide *ngFor="let slide of slides">
-        <img src="{{slide.img}}" alt="{{slide.id}}">
-      </ion-slide>
-    </ion-slides>
-
-  </ion-header>
-
-  <div id="container">
-  
-    <div class="tools-menu">
-
-      <ion-tab-bar *ngFor="let p of appPages; let i = index" slot="{{p.icon}}">
-        <ion-tab-button 
-        (click)="selectedIndex = i" 
-        routerDirection="root" 
-        [routerLink]="[p.url]"
-        [class.selected]="selectedIndex == i">
-        <ion-icon name="{{p.icon}}"></ion-icon>
-        <ion-label>{{ p.title }}</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-
-    </div>
-  </div>
-</ion-content>
+<app-menu>
+    <ion-router-outlet ></ion-router-outlet>
+</app-menu>

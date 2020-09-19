@@ -10,56 +10,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  
-  public user = {
-    name:'André Torquato',
-    photo: 'https://avatars2.githubusercontent.com/u/44441254?s=460&u=9b9fad4dfdf539853131f359812f98f65be72205&v=4'
-  }
-  public selectedIndex = 0;
-  public appPages = [
-    {
-      title: 'Início',
-      url: '/home/dashboard',
-      icon: 'home'
-    },
-    {
-      title: 'Identidade',
-      url: '/home/profile',
-      icon: 'person'
-    },
-    {
-      title: 'Dependentes',
-      url: '/home/dependencies',
-      icon: 'people'
-    },
-    {
-      title: 'Pagamentos',
-      url: '/home/payment',
-      icon: 'cash'
-    },
-    {
-      title: 'Solicitar Representante',
-      url: '/home/request',
-      icon: 'call'
-    },
-    {
-      title: 'Atendimento Póstumo',
-      url: '/home/answer',
-      icon: 'medkit'
-    },
-    {
-      title: 'Reportar Problema',
-      url: '/home/feedback',
-      icon: 'bug'
-    },
-    {
-      title: 'Sair',
-      url: '/login',
-      icon: 'power'
-    }
-  ];
-  
-  
 
   constructor(
     private platform: Platform,
@@ -77,9 +27,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    const path = window.location.pathname.split('home/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
+    
   }
 }

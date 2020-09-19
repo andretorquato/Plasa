@@ -1,0 +1,29 @@
+ion-card.card-user{
+    margin-top: 18.8%;
+    border-radius: 16%;
+    height: 85%;
+    --background:var(--user-card);
+}
+
+ion-card.card-user ion-avatar{
+    width: 14rem;
+    height: 14rem;
+    margin: auto;
+}
+ion-card.card-user ion-card-title{
+    font-size: 24px;
+    color: var( --user-card-font-color);
+    text-align: center;
+    margin-top: 10px;
+}
+ion-card.card-user ion-item{
+    --background:var(--user-card);
+    --border-style:none;
+}
+
+ion-card.card-user ion-label{
+    color: var(--user-card-font-color);
+    font-weight: bold;
+    margin: auto;
+    font-size: 1rem;
+}
