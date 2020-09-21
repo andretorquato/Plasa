@@ -15,13 +15,14 @@ const routes: Routes = [
     path: 'home',
     component: HomePage,
     children: [
-      { path: 'home', redirectTo: 'dashboard', pathMatch: 'full'},
+      
       { path: 'dashboard', component:DashboardComponent},
       { path: 'profile', component:ProfileComponent},
       { path: 'dependencies', component:DependenciesComponent},
       { path: 'payment', component:PaymentComponent},
       { path: 'request', component:AnswerComponent},
-      { path: 'answer', component:PosthumousComponent}
+      { path: 'answer', component:PosthumousComponent},
+      { path: 'home', redirectTo: 'dashboard', pathMatch: 'full'}
     ]
   }
 ];
