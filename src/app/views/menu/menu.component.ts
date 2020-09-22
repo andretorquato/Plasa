@@ -32,7 +32,7 @@ export class MenuComponent implements OnInit {
     name: 'André Torquato',
     photo: 'https://avatars2.githubusercontent.com/u/44441254?s=460&u=9b9fad4dfdf539853131f359812f98f65be72205&v=4'
   }
-  public logo = 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg';
+  public logo = 'https://plasa.app.gruponobre.com/images/plasateste.png';
   public selectedIndex = 0;
   public appPages = [
     {

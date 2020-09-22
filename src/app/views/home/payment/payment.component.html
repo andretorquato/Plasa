@@ -1,3 +1,25 @@
-<div id="home_content">
-  <p>meu texto</p>
-</div>
+<ion-content id="home_content">
+  <ion-item class="header table">
+    <ion-label position="fixed"slot="start">
+      Mensalidade
+    </ion-label>
+    <ion-label class="ion-text-wrap">
+      Data do Pagamento
+    </ion-label>
+    <ion-label slot="end">
+      Valor
+    </ion-label>
+  </ion-item>
+  <ion-item *ngFor="let pay of payments" class="table">
+    <ion-label position="fixed" slot="start">
+      {{pay.date}}
+    </ion-label>
+    <ion-label class="ion-text-wrap">
+      {{pay.pay}}
+    </ion-label>
+    <ion-label slot="end">
+      R$ {{pay.value}}
+    </ion-label>
+  </ion-item>
+    
+</ion-content>

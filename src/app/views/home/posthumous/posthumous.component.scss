@@ -1,0 +1,38 @@
+ion-toolbar,
+ion-content{
+    --background: var(--background-all);
+}
+ion-toolbar.title{
+    padding-top: 10%;
+} 
+ion-toolbar ion-title{
+    text-align: center;
+}
+ion-toolbar{
+    max-width: 90%;
+    margin: auto;
+    padding-top: 1vh;
+    padding-bottom: 10%;
+
+}
+ion-toolbar ion-button{
+    --background: var(--button-white);
+    --border-radius: 24px;
+    position: relative;
+}
+
+ion-icon{
+    height: 100%;
+    width: 18%;
+    position: absolute;
+    left: -10%;
+    border-radius: 10%;
+ }
+ion-button ion-icon{
+    color:var(--button-white);
+    background: #2196f3;
+}
+ion-button ion-icon.whatsapp{
+    color:var(--button-white);
+    background: #4bb052;
+}
