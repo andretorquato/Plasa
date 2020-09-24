@@ -9,6 +9,7 @@ import { DependenciesComponent } from './dependencies/dependencies.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PosthumousComponent } from './posthumous/posthumous.component';
+import { MapComponent } from '../map/map.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'dependencies', component:DependenciesComponent},
       { path: 'payment', component:PaymentComponent},
       { path: 'request', component:AnswerComponent},
+      { path: 'request/:id', component:MapComponent},
       { path: 'answer', component:PosthumousComponent},
       { path: 'home', redirectTo: 'dashboard', pathMatch: 'full'}
     ]
